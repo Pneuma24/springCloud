@@ -1,0 +1,14 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: eureka-rabbon
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8088/eureka/
+  instance:
+    preferIpAddress: true
+    instance-id: localhost:${server.port}
